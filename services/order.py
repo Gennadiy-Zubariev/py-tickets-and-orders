@@ -7,6 +7,7 @@ from db.models import Order, Ticket
 
 User = get_user_model()
 
+
 @transaction.atomic
 def create_order(
         tickets: list[dict],
