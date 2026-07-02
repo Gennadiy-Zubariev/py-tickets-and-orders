@@ -19,7 +19,7 @@ def get_user(user_id: int) -> User:
 
 
 def update_user(user_id: int, **kwargs) -> User:
-    user = User.objects.get(pk=user_id)
+    user = get_user(user_id)
     password = kwargs.pop("password", None)
     if password:
         user.set_password(password)
